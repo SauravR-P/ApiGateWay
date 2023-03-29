@@ -1,0 +1,24 @@
+{
+
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration",
+      "BaseUrl": "https://localhost:5003"
+    
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/get",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/DBRead",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7008
+        }
+      ]
+    }
+
+  ]
+}
